@@ -1,0 +1,50 @@
+/* Подключение шрифта */
+
+@font-face {
+	font-family: "Gilroy";
+	src: local("../fonts/Gilroy Bold"), local("../fonts/Gilroy-Bold"), url("../fonts/Gilroy-Bold.woff2") format("woff2"),
+		url("../fonts/Gilroy-Bold.woff") format("woff"), url("../fonts/Gilroy-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Gilroy";
+	src: local("../fonts/Gilroy Medium"), local("../fonts/Gilroy-Medium"),
+		url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff"),
+		url("../fonts/Gilroy-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: local("../fonts/Gilroy Regular"), local("../fonts/Gilroy-Regular"),
+		url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff"),
+		url("../fonts/Gilroy-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Gilroy";
+	src: local("../fonts/Gilroy Black"), local("../fonts/Gilroy-Black"),
+		url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff"),
+		url("../fonts/Gilroy-Black.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Gilroy";
+	src: local("../fonts/Gilroy Semibold"), local("../fonts/Gilroy-Semibold"),
+		url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff"),
+		url("../fonts/Gilroy-Semibold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Gilroy";
+	src: local("../fonts/Gilroy Extrabold"), local("../fonts/Gilroy-Extrabold"),
+		url("../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../fonts/Gilroy-Extrabold.woff") format("woff"),
+		url("../fonts/Gilroy-Extrabold.ttf") format("truetype");
+	font-weight: 800;
+	font-style: normal;
+}

@@ -1,0 +1,220 @@
+/* оболочка */
+._container {
+	max-width: 1170px;
+	margin: 0 auto;
+	font-size: 18px;
+}
+
+/* ibg */
+._ibg {
+	position: relative;
+}
+._ibg img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+
+/* ОДАБТИВНЫЙ ШРИФТ */
+._font-and {
+	/* min 14px: max 18 ;
+	18-14 =4;
+	width: 1420-320 =1100;
+	 */
+	font-size: calc(14px + 4 * ((100vw - 320px) / 1100));
+}
+/* меню бургер три полоски */
+._icon-menu {
+	z-index: 5;
+	display: block;
+	position: relative;
+	width: 30px;
+	height: 18px;
+	cursor: pointer;
+}
+._icon-menu span,
+._icon-menu::before,
+._icon-menu::after {
+	left: 0;
+	position: absolute;
+	height: 10%;
+	width: 100%;
+	transition: all 0.3s ease 0s;
+	background-color: #000;
+}
+._icon-menu::before,
+._icon-menu::after {
+	content: "";
+}
+._icon-menu::before {
+	top: 0;
+}
+._icon-menu::after {
+	bottom: 0;
+}
+._icon-menu span {
+	top: 50%;
+	transform: scale(1) translate(0px, -50%);
+}
+
+._icon-menu._active span {
+	transform: scale(0) translate(0px, -50%);
+}
+._icon-menu._active::before {
+	top: 50%;
+	transform: rotate(-45deg) translate(0px, -50%);
+}
+._icon-menu._active::after {
+	bottom: 50%;
+	transform: rotate(45deg) translate(0px, 50%);
+}
+
+/* ТАБЫ */
+._tabs {
+}
+._tabs-item {
+	font-size: 20px;
+	transition-duration: 1s;
+}
+._tabs-item._active {
+	background-color: red;
+	transition: background-color 1.2s ease 0s, padding 5s ease-out 0s;
+}
+._tabs-block {
+	display: none;
+	font-size: 20px;
+}
+._tabs-block._active {
+	display: block;
+}
+
+/* ГОТОВАЯ СТРЕЛКА */
+span.menu__arrow {
+	display: block;
+	width: 0;
+	height: 0;
+	margin: 0px 0px 0px 5px;
+	transition: transform 0.3s ease 0s;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 10px solid #fff;
+}
+li._active .menu__arrow {
+	transform: rotate(-180deg);
+}
+
+/* готовый плюсик */
+.block._init ._block__title::before,
+.block._init ._block__title::after {
+	content: "";
+	width: 20px;
+	height: 1px;
+	background-color: #fff;
+	position: absolute;
+	right: 10px;
+	top: 20px;
+	transition: transform 0.3s ease 0s;
+}
+.block._init ._block__title::after {
+	transform: rotate(-90deg);
+}
+.block._init ._block__title._active::after {
+	transform: rotate(0deg);
+}
+
+/* ГОТОВАЯ ГАЛКА */
+.__block__title:before,
+.__block__title:after {
+	content: "";
+	width: 10px;
+	height: 1px;
+	background-color: #000;
+	position: absolute;
+	top: 8px;
+	transition: all 0.3s ease 0s;
+}
+.__block__title:before {
+	transform: rotate(40deg);
+	left: 0;
+}
+.__block__title:after {
+	transform: rotate(-40deg);
+	left: 8px;
+}
+
+.__block__title.active:before,
+.__block__title.active:after {
+	background-color: red;
+}
+.__block__title.active:before {
+	transform: rotate(-40deg);
+}
+.__block__title.active:after {
+	transform: rotate(40deg);
+}
+
+/* ПОПАПЫ */
+.wrapper {
+	overflow: hidden;
+}
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	top: 0;
+	left: 0;
+	z-index: 25;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.8s ease 0s;
+}
+.popup.open {
+	opacity: 1;
+	visibility: visible;
+}
+.popup.open .popup__content {
+	transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+	opacity: 1;
+}
+
+.popup__body {
+	min-height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 10px;
+	transition: all 0.8s ease 0s;
+}
+.popup__content {
+	background-color: #fff;
+	color: #000;
+	max-width: 800px;
+	padding: 30px;
+	position: relative;
+	z-index: 25;
+
+	transition: all 0.8s ease 0s;
+	opacity: 0;
+	transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.popup__image img {
+	max-width: 100%;
+	vertical-align: top;
+}
+
+.popup__close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 20px;
+	color: #000;
+	text-decoration: none;
+}
